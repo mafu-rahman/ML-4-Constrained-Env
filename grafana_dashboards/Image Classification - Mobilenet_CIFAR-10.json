@@ -1,0 +1,1082 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7st8fvw15vke"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "rate(container_cpu_usage_seconds_total{name=\"mobilenet_original\"}[1m])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CPU Utilization Full Model",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "(container_memory_usage_bytes{name=\"mobilenet_original\"}) / 1000000",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "RAM Usage - Full Model",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "container_fs_reads_bytes_total{name=\"mobilenet_original\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Disk Read - Full Model",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"d6f2d93e08351c948a86349cc1749bab865b6e250a0c8cefabecf1373f3a7eee\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:76bea50fe72d9da5a16f5ba8c0a23c46054a042d8b04cd370cfcc4a16580aae7\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"48e07e93e23894bf95c29ed29052fc12ce2ccad6012c18d1f66f90606b351437\", container_label_com_docker_compose_service=\"mobilenet_pca500\", container_label_com_docker_compose_version=\"2.30.3\", cpu=\"total\", id=\"/docker/58f79602a0ff22a27ab8470855ab1378630190c14b49f4ef5436ef334aff8ef4\", image=\"exp1-mobilenet_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7st8fvw15vke"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "rate(container_cpu_usage_seconds_total{name=\"mobilenet_pca500\"}[1m])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CPU Utilization - Top 500 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{__name__=\"container_memory_usage_bytes\", container_label_com_docker_compose_config_hash=\"d6f2d93e08351c948a86349cc1749bab865b6e250a0c8cefabecf1373f3a7eee\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:76bea50fe72d9da5a16f5ba8c0a23c46054a042d8b04cd370cfcc4a16580aae7\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"48e07e93e23894bf95c29ed29052fc12ce2ccad6012c18d1f66f90606b351437\", container_label_com_docker_compose_service=\"mobilenet_pca500\", container_label_com_docker_compose_version=\"2.30.3\", id=\"/docker/58f79602a0ff22a27ab8470855ab1378630190c14b49f4ef5436ef334aff8ef4\", image=\"exp1-mobilenet_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"d6f2d93e08351c948a86349cc1749bab865b6e250a0c8cefabecf1373f3a7eee\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:76bea50fe72d9da5a16f5ba8c0a23c46054a042d8b04cd370cfcc4a16580aae7\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"48e07e93e23894bf95c29ed29052fc12ce2ccad6012c18d1f66f90606b351437\", container_label_com_docker_compose_service=\"mobilenet_pca500\", container_label_com_docker_compose_version=\"2.30.3\", id=\"/docker/58f79602a0ff22a27ab8470855ab1378630190c14b49f4ef5436ef334aff8ef4\", image=\"exp1-mobilenet_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 8
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "container_memory_usage_bytes{name=\"mobilenet_pca500\"} / 1000000",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "RAM Usage - Top 500 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{__name__=\"container_fs_reads_bytes_total\", container_label_com_docker_compose_config_hash=\"d6f2d93e08351c948a86349cc1749bab865b6e250a0c8cefabecf1373f3a7eee\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:76bea50fe72d9da5a16f5ba8c0a23c46054a042d8b04cd370cfcc4a16580aae7\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"48e07e93e23894bf95c29ed29052fc12ce2ccad6012c18d1f66f90606b351437\", container_label_com_docker_compose_service=\"mobilenet_pca500\", container_label_com_docker_compose_version=\"2.30.3\", device=\"/dev/vda\", id=\"/docker/58f79602a0ff22a27ab8470855ab1378630190c14b49f4ef5436ef334aff8ef4\", image=\"exp1-mobilenet_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 8
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "container_fs_reads_bytes_total{name=\"mobilenet_pca500\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Disk Read - Full Model",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"d6f2d93e08351c948a86349cc1749bab865b6e250a0c8cefabecf1373f3a7eee\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:76bea50fe72d9da5a16f5ba8c0a23c46054a042d8b04cd370cfcc4a16580aae7\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"48e07e93e23894bf95c29ed29052fc12ce2ccad6012c18d1f66f90606b351437\", container_label_com_docker_compose_service=\"mobilenet_pca500\", container_label_com_docker_compose_version=\"2.30.3\", cpu=\"total\", id=\"/docker/58f79602a0ff22a27ab8470855ab1378630190c14b49f4ef5436ef334aff8ef4\", image=\"exp1-mobilenet_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"03a4e9e1f0655c632842b69f4a49e8a28d8de8c9bd706a509688117f450fcc77\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:83bf5c816d8c7dc167ad662649b6531729bf2632f55bc199432fa54b77c7bc43\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"d5bccb4af2886d23d013161ed84ee4ba9bc9b7f2ace1f3829fd281b0d5970e55\", container_label_com_docker_compose_service=\"mobilenet_pca200\", container_label_com_docker_compose_version=\"2.30.3\", cpu=\"total\", id=\"/docker/eb09a8de2aff2f4dbb5364f2ac81e80e3f2464d8285fa05fec7cefb47487f8fc\", image=\"exp1-mobilenet_pca200\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca200\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 16
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7st8fvw15vke"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "rate(container_cpu_usage_seconds_total{name=\"mobilenet_pca200\"}[1m])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CPU Utilization - Top 200 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{__name__=\"container_memory_usage_bytes\", container_label_com_docker_compose_config_hash=\"d6f2d93e08351c948a86349cc1749bab865b6e250a0c8cefabecf1373f3a7eee\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:76bea50fe72d9da5a16f5ba8c0a23c46054a042d8b04cd370cfcc4a16580aae7\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"48e07e93e23894bf95c29ed29052fc12ce2ccad6012c18d1f66f90606b351437\", container_label_com_docker_compose_service=\"mobilenet_pca500\", container_label_com_docker_compose_version=\"2.30.3\", id=\"/docker/58f79602a0ff22a27ab8470855ab1378630190c14b49f4ef5436ef334aff8ef4\", image=\"exp1-mobilenet_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{__name__=\"container_memory_usage_bytes\", container_label_com_docker_compose_config_hash=\"03a4e9e1f0655c632842b69f4a49e8a28d8de8c9bd706a509688117f450fcc77\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:83bf5c816d8c7dc167ad662649b6531729bf2632f55bc199432fa54b77c7bc43\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"d5bccb4af2886d23d013161ed84ee4ba9bc9b7f2ace1f3829fd281b0d5970e55\", container_label_com_docker_compose_service=\"mobilenet_pca200\", container_label_com_docker_compose_version=\"2.30.3\", id=\"/docker/eb09a8de2aff2f4dbb5364f2ac81e80e3f2464d8285fa05fec7cefb47487f8fc\", image=\"exp1-mobilenet_pca200\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca200\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"03a4e9e1f0655c632842b69f4a49e8a28d8de8c9bd706a509688117f450fcc77\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:83bf5c816d8c7dc167ad662649b6531729bf2632f55bc199432fa54b77c7bc43\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"d5bccb4af2886d23d013161ed84ee4ba9bc9b7f2ace1f3829fd281b0d5970e55\", container_label_com_docker_compose_service=\"mobilenet_pca200\", container_label_com_docker_compose_version=\"2.30.3\", id=\"/docker/eb09a8de2aff2f4dbb5364f2ac81e80e3f2464d8285fa05fec7cefb47487f8fc\", image=\"exp1-mobilenet_pca200\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca200\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 16
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "container_memory_usage_bytes{name=\"mobilenet_pca200\"}/ 1000000",
+          "format": "time_series",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "RAM Usage - Top 200 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7st8fvw15vke"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{__name__=\"container_fs_reads_bytes_total\", container_label_com_docker_compose_config_hash=\"03a4e9e1f0655c632842b69f4a49e8a28d8de8c9bd706a509688117f450fcc77\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:83bf5c816d8c7dc167ad662649b6531729bf2632f55bc199432fa54b77c7bc43\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp1\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ml4/exp1/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ml4/exp1\", container_label_com_docker_compose_replace=\"d5bccb4af2886d23d013161ed84ee4ba9bc9b7f2ace1f3829fd281b0d5970e55\", container_label_com_docker_compose_service=\"mobilenet_pca200\", container_label_com_docker_compose_version=\"2.30.3\", device=\"/dev/vda\", id=\"/docker/eb09a8de2aff2f4dbb5364f2ac81e80e3f2464d8285fa05fec7cefb47487f8fc\", image=\"exp1-mobilenet_pca200\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"mobilenet_pca200\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 16
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "container_fs_reads_bytes_total{name=\"mobilenet_pca200\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Disk Read - Full Model",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Image Classification - Mobilenet/CIFAR-10",
+  "uid": "fe7sx56q7981sa",
+  "version": 17,
+  "weekStart": ""
+}

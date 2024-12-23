@@ -1,0 +1,10 @@
+tensorflow==2.16.2
+pandas
+matplotlib
+psutil
+fastapi
+uvicorn[standard]
+numpy
+pillow
+python-multipart
+prometheus-client
