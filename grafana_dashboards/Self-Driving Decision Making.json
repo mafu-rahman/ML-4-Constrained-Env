@@ -1,0 +1,1063 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "rate(container_cpu_usage_seconds_total{name=\"self-driving_original\"}[1m])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CPU Utilization - Full Model",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "expr": "container_memory_usage_bytes{name=\"self-driving_original\"} / 1000000",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "RAM Usage - Full Model",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "{__name__=\"container_fs_reads_bytes_total\", container_label_com_docker_compose_config_hash=\"da6fe1d1f9124090d8380b7bc92fdedce08badc0b15536bba08ce31765e4ec8f\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:f4508eb6a64a5c60e3296b0e445acb96e7a68d747911e96f0e048f5901eb80e8\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp2\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2\", container_label_com_docker_compose_service=\"self-driving_original\", container_label_com_docker_compose_version=\"2.30.3\", device=\"/dev/vda\", id=\"/docker/dad1518da8040e35096f817c60fcde8385df8de5ab8ca7389f638caeacb09216\", image=\"exp2-self-driving_original\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"self-driving_original\"}"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "container_fs_reads_bytes_total{name=\"self-driving_original\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Disk I/O - Full Model",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"6d30e8e95d6b05d6f5cdf42fa38f08941bf690665c5b159a5aaa4a1776e7a46a\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:946be1c066a090a5e79d5194770999f739e415d4c2ccc425cae3d7e84f1d3e7c\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp2\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2\", container_label_com_docker_compose_service=\"self-driving_pca2000\", container_label_com_docker_compose_version=\"2.30.3\", cpu=\"total\", id=\"/docker/67aaf696dd52272b7f59c58387f8b34d4119a459eba818af1cf21bf7bfcd5fff\", image=\"exp2-self-driving_pca2000\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"self-driving_pca2000\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "rate(container_cpu_usage_seconds_total{name=\"self-driving_pca2000\"}[1m])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CPU Utilization - Top 2000 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"6d30e8e95d6b05d6f5cdf42fa38f08941bf690665c5b159a5aaa4a1776e7a46a\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:946be1c066a090a5e79d5194770999f739e415d4c2ccc425cae3d7e84f1d3e7c\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp2\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2\", container_label_com_docker_compose_service=\"self-driving_pca2000\", container_label_com_docker_compose_version=\"2.30.3\", id=\"/docker/67aaf696dd52272b7f59c58387f8b34d4119a459eba818af1cf21bf7bfcd5fff\", image=\"exp2-self-driving_pca2000\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"self-driving_pca2000\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 8
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "container_memory_usage_bytes{name=\"self-driving_pca2000\"} / 1000000",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "RAM Usage - Top 2000 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{__name__=\"container_fs_reads_bytes_total\", container_label_com_docker_compose_config_hash=\"6d30e8e95d6b05d6f5cdf42fa38f08941bf690665c5b159a5aaa4a1776e7a46a\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:946be1c066a090a5e79d5194770999f739e415d4c2ccc425cae3d7e84f1d3e7c\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp2\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2\", container_label_com_docker_compose_service=\"self-driving_pca2000\", container_label_com_docker_compose_version=\"2.30.3\", device=\"/dev/vda\", id=\"/docker/67aaf696dd52272b7f59c58387f8b34d4119a459eba818af1cf21bf7bfcd5fff\", image=\"exp2-self-driving_pca2000\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"self-driving_pca2000\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 8
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "container_fs_reads_bytes_total{name=\"self-driving_pca2000\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Disk I/O - Top 2000 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"cc8681af7a417ac276c919302f9339ae02a1a1a82b69f72c88be4f1dd657b8bb\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:96bcd295997708aadba990b0485afba66526ec99a0194e326fceb50c19fd9714\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp2\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2\", container_label_com_docker_compose_service=\"self-driving_pca500\", container_label_com_docker_compose_version=\"2.30.3\", cpu=\"total\", id=\"/docker/c04f5b5dadff9e15a4dee7e1a22610137e532263084af473bf29ffe3744a21bc\", image=\"exp2-self-driving_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"self-driving_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 16
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "rate(container_cpu_usage_seconds_total{name=\"self-driving_pca500\"}[1m])",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "CPU Utilization - Top 500 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{container_label_com_docker_compose_config_hash=\"cc8681af7a417ac276c919302f9339ae02a1a1a82b69f72c88be4f1dd657b8bb\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:96bcd295997708aadba990b0485afba66526ec99a0194e326fceb50c19fd9714\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp2\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2\", container_label_com_docker_compose_service=\"self-driving_pca500\", container_label_com_docker_compose_version=\"2.30.3\", id=\"/docker/c04f5b5dadff9e15a4dee7e1a22610137e532263084af473bf29ffe3744a21bc\", image=\"exp2-self-driving_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"self-driving_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 16
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "builder",
+          "expr": "container_memory_usage_bytes{name=\"self-driving_pca500\"} / 1000000",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "RAM Usage - Top 500 Features",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "fe7t355fg21hcc"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "{__name__=\"container_fs_reads_bytes_total\", container_label_com_docker_compose_config_hash=\"cc8681af7a417ac276c919302f9339ae02a1a1a82b69f72c88be4f1dd657b8bb\", container_label_com_docker_compose_container_number=\"1\", container_label_com_docker_compose_image=\"sha256:96bcd295997708aadba990b0485afba66526ec99a0194e326fceb50c19fd9714\", container_label_com_docker_compose_oneoff=\"False\", container_label_com_docker_compose_project=\"exp2\", container_label_com_docker_compose_project_config_files=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2/docker-compose.yml\", container_label_com_docker_compose_project_working_dir=\"/Users/mafu/Desktop/ML-4-Constrained-Env/exp2\", container_label_com_docker_compose_service=\"self-driving_pca500\", container_label_com_docker_compose_version=\"2.30.3\", device=\"/dev/vda\", id=\"/docker/c04f5b5dadff9e15a4dee7e1a22610137e532263084af473bf29ffe3744a21bc\", image=\"exp2-self-driving_pca500\", instance=\"host.docker.internal:8080\", job=\"cadvisor\", name=\"self-driving_pca500\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 16
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "fe7t355fg21hcc"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "expr": "container_fs_reads_bytes_total{name=\"self-driving_pca500\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": false,
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Disk I/O - Top 500 Features",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "refresh": "auto",
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Self-Driving Decision Making",
+  "uid": "be7t3f1sujri8b",
+  "version": 14,
+  "weekStart": ""
+}
