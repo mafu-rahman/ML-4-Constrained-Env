@@ -3,7 +3,7 @@ This is an experimental setup for running ML models in constrained environments,
 
 This repository sets up and monitors two similar experiments. 
 
-Instructions are same for either experiment. Note: Due to port conflicts, please delete the conatiners and images when running the other experiment:
+Instructions are same for either experiment. Note: Due to port conflicts, please delete the containers and images when running the other experiment:
 
 Three models (original, PCA-1, and PCA-2) in resource-constrained environments. Each model is limited to 1 CPU and 512MB RAM. The stack includes cAdvisor for container metrics, Prometheus for metrics storage, and Grafana for visualization.
 
