@@ -1,5 +1,5 @@
 # ML-4-Constrained-Env
-This is an experimental setup for running ML models in constrained environments, as discussed in the paper here: https://github.com/mafu-rahman/ML-4-Constrained-Env/blob/main/4.2%20Report.pdf
+This is an experimental setup for running ML models in constrained environments, as discussed in the paper here: https://github.com/mafu-rahman/ML-4-Constrained-Env/blob/main/Machine_Learning_Deployment_in_Resource_Constrained_Environments__Experiments_and_Analysis.pdf
 
 This repository sets up and monitors two similar experiments. 
 
