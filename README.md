@@ -11,6 +11,7 @@ Three models (original, PCA-1, and PCA-2) in resource-constrained environments. 
 Clone the repository
 
 Navigate to the directory of preferred experimeent (exp1 or exp2).
+-> Unzip the files for images that will be used for inferencing. (xyz - Extract_me.zip)
 
 Start the services:  docker compose up --build
 
